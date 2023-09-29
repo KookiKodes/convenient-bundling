@@ -1,3 +1,5 @@
+import type { PrismaClient } from "@prisma/client/scripts/default-index";
+
 import "@shopify/shopify-app-remix/adapters/node";
 import {
   AppDistribution,
@@ -17,7 +19,7 @@ const shopify = shopifyApp({
   scopes: process.env.SCOPES?.split(","),
   appUrl: process.env.SHOPIFY_APP_URL || "",
   authPathPrefix: "/auth",
-  sessionStorage: new PrismaSessionStorage(prisma),
+  sessionStorage: new PrismaSessionStorage(prisma as PrismaClient),
   distribution: AppDistribution.AppStore,
   restResources,
   webhooks: {

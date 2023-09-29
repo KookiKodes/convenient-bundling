@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.0",
-    "@prisma/client": "^4.13.0",
+    "@prisma/client": "^4.16.1",
+    "@prisma/extension-accelerate": "^0.6.2",
     "@remix-run/node": "^1.19.1",
     "@remix-run/react": "^1.19.1",
     "@remix-run/serve": "^1.19.1",
@@ -39,7 +40,7 @@
     "cross-env": "^7.0.3",
     "isbot": "latest",
     "lodash": "^4.17.21",
-    "prisma": "^4.13.0",
+    "prisma": "^4.16.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",

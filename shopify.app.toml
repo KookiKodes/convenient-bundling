@@ -1,3 +1,27 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-scopes = "write_products"
+name = "Convenient Bundling"
+client_id = "2f5969fe2e2b400a5de79f85b1a5505d"
+application_url = "https://piano-chains-theoretical-constitutional.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_checkouts,write_checkouts,read_products,read_metaobject_definitions,write_metaobject_definitions,read_metaobjects,write_metaobjects,read_orders,write_order_edits,read_files,read_themes"
+
+[auth]
+redirect_urls = [
+  "https://piano-chains-theoretical-constitutional.trycloudflare.com/auth/callback",
+  "https://piano-chains-theoretical-constitutional.trycloudflare.com/auth/shopify/callback",
+  "https://piano-chains-theoretical-constitutional.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "convenient-bundling-test.myshopify.com"
