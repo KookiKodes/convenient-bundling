@@ -1,0 +1,66 @@
+{
+  "name": "convenient-bundling",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production remix build",
+    "predev": "prisma generate && prisma migrate deploy",
+    "dev": "shopify app dev",
+    "config:link": "shopify app config link",
+    "config:push": "shopify app config push",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "config:use": "shopify app config use",
+    "env": "shopify app env",
+    "start": "remix-serve build",
+    "docker-start": "npm run setup && npm run start",
+    "setup": "prisma generate && prisma migrate deploy",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "shopify": "shopify",
+    "prisma": "prisma"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.0",
+    "@prisma/client": "^4.13.0",
+    "@remix-run/node": "^1.19.1",
+    "@remix-run/react": "^1.19.1",
+    "@remix-run/serve": "^1.19.1",
+    "@shopify/app": "3.48.3",
+    "@shopify/app-bridge-types": "^0.0.3",
+    "@shopify/cli": "3.48.3",
+    "@shopify/polaris": "^11.1.2",
+    "@shopify/polaris-icons": "^7.8.1",
+    "@shopify/shopify-app-remix": "^1.1.0",
+    "@shopify/shopify-app-session-storage-prisma": "^1.0.0",
+    "@tanstack/react-query": "^4.33.0",
+    "@trpc/client": "^10.38.0",
+    "@trpc/react-query": "^10.38.0",
+    "@trpc/server": "^10.38.0",
+    "beautiful-react-hooks": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "isbot": "latest",
+    "lodash": "^4.17.21",
+    "prisma": "^4.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "scheduler": "^0.23.0",
+    "use-context-selector": "^1.4.1",
+    "zod": "^3.22.2",
+    "zod-form-data": "^2.0.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.19.1",
+    "@remix-run/eslint-config": "^1.19.1",
+    "@types/eslint": "^8.40.0",
+    "@types/lodash": "^4.14.197",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8"
+  },
+  "workspaces": {
+    "packages": [
+      "extensions/*"
+    ]
+  },
+  "author": "kookikodes"
+}
